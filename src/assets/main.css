@@ -1,0 +1,102 @@
+@import url("https://chinese-fonts-cdn.deno.dev/packages/crgkk/dist/%E7%A8%8B%E8%8D%A3%E5%85%89%E5%88%BB%E6%A5%B7/result.css");
+@import url('base.css');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+img {
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+a {
+    text-decoration: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+* {
+
+    color: var(--text);
+}
+
+@media (max-width: 767px) {
+    #app {
+        min-width: 320px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+@media (min-width: 1024px) {}
+
+
+body {
+    font-family: "Sour Gummy", sans-serif;
+
+}
+
+/* 全局滚动条样式 */
+::-webkit-scrollbar {
+    width: 2px;
+    /* 设置垂直滚动条的宽度 */
+    height: 2px;
+    /* 设置水平滚动条的高度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* 设置滚动条轨道的颜色 */
+    border-radius: 4px;
+    /* 轨道圆角 */
+    box-shadow: 0px 1px 1px var(--box-shadow);
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background: #20201f7a;
+    /* 滚动条滑块颜色 */
+    border-radius: 4px;
+    /* 滑块圆角 */
+}
+
+/* 鼠标悬停在滚动条上时滑块的颜色 */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.el-message--error {
+    background-color: #fdecea !important; /* 修改背景色 */
+    color: #f56c6c !important;           /* 修改文字颜色 */
+    border: 2px solid #fab6b6 !important; /* 添加边框 */
+    border-radius: 10px !important;      /* 圆角 */
+    padding: 10px !important;            /* 内边距 */
+}
+
+.el-message--success {
+    background-color: #f0f9eb !important; /* 修改背景色 */
+    color: #67c23a !important;           /* 修改文字颜色 */
+    border: 2px solid #b7eb8f !important; /* 添加边框 */
+    border-radius: 10px !important;      /* 圆角 */
+    padding: 10px !important;            /* 内边距 */
+}

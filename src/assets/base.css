@@ -1,0 +1,200 @@
+:root[data-theme='light'] {
+  /* 主题色 */
+  --light-blue3: #5C88C4;
+  --light-blue2: #789DBC;
+  --light-blue1: #7fa2c7;
+  --light-blue0: #cad6ee;
+
+  --lighr-yellow0: #FFECC8;
+  --light-yellow1: #FFD09B;
+
+  --pink1: #FFB0B0;
+  --pink2: #FFCFB3;
+  --pink3: #E78F81;
+
+  --purple1: #A594F9;
+
+  --orange1: #FF7F3E;
+
+  --opacity-blue: #cad6ee;
+
+}
+
+
+:root[data-theme='light'] {
+  --text: #000000;
+  --grey-text: #535353;
+  --reversed-text: #ffffff;
+
+
+  --gradation-botton: #0000009d;
+  --gradation-top: #6b686800;
+  /* 轮播图的渐变透明图 */
+
+
+  --color-nav-shadow: var(--light-blue2);
+  /* 导航栏阴影色 */
+
+
+  --color-nav-back1: var(--light-blue1);
+  --color-nav-back2: var(--light-blue1);
+  /* 导航啦的渐变色，从上到下 */
+
+
+  --button-back: var(--light-yellow1);
+  --box-shadow: var(--light-blue3);
+  --button-hover: var(--pink3);
+  /* 电影电视剧按钮的背景色，阴影色 */
+
+  --footer-back: var(--light-blue1);
+  /* footer的背景色 */
+  --home-routerview-back: var(--light-blue0);
+  /* 主页的主题背景色 */
+
+  --sider-back1: var(--pink1);
+  --sider-back2: var(--pink2);
+  --sider-back3: var(--pink3);
+  --sider-back4: var(--light-yellow1);
+  /* 侧边导航栏背景色 */
+  --sider-back-all: var(--light-blue0);
+
+  --sider-back-hover: var(--purple1);
+  --router-top-active: var(--orange1);
+  --router-sider-active: var(--orange1);
+  /* 侧边导航栏激活的颜色 */
+
+  --people-carousel-shadow: var(--light-blue3);
+  /* 人物轮播图的阴影色 */
+
+  --input-back: var(--light-blue0);
+  /* 设置界面输入框颜色 */
+
+  --select-color:var(--pink1);
+  --no-select-color:var(--light-blue0);
+  /* 主题色的选择颜色 */
+  --animal-back: var(--light-blue1);
+
+  --poster-back: var(--light-blue0);
+
+  --text-button: var(--orange1);
+  /* 详情页文字button背景 */
+  --production-back:var(--lighr-yellow0);
+
+  --seasons:var(--orange1);
+
+
+
+  /* 注册登录界面颜色 */
+  --left-light-color:var(--light-blue0);
+  --border-color:var(--light-blue1);
+
+  /* 注册登录界面 渐变色*/
+  --login-left:var(--light-blue0);
+  --login-right:var(--light-blue3);
+
+
+  /* 收藏列表的条目颜色 */
+  --li-color1:var(--pink1);
+  --li-color2:var(--pink2);
+
+
+
+}
+
+
+:root[data-theme='dark'] {
+  /* 主题色 */
+  --dark-blue0: #7077A1;
+  --dark-blue1: #424769;
+  --dark-blue2: #2D3250;
+
+  --orange0: #F6B17A;
+  --pink0: #EAB2A0;
+  --pink1: #E19898;
+  --pink2: #A76F6F;
+  --pink3: #A2678A;
+
+}
+
+
+:root[data-theme='dark'] {
+  --text: #ffffff;
+  --grey-text: #535353;
+  --reversed-text: #000000;
+
+
+  --gradation-botton: #0000009d;
+  --gradation-top: #0000003d;
+  /* 轮播图的渐变透明图 */
+
+
+  --color-nav-shadow: var(--dark-blue1);
+  /* 导航栏阴影色 */
+
+
+  --color-nav-back1: var(--dark-blue1);
+  --color-nav-back2: var(--dark-blue1);
+  /* 导航啦的渐变色，从上到下 */
+
+  --box-shadow: var(--dark-blue2);
+  /* 所有的阴影色 */
+
+  --button-back: var(--dark-blue1);
+  --button-hover: var(--dark-blue0);
+  /* 电影电视剧按钮的背景色，阴影色 */
+
+  --footer-back: var(--dark-blue0);
+  /* footer的背景色 */
+  --home-routerview-back: var(--dark-blue0);
+  /* 主页的主题背景色 */
+
+  --sider-back1: var(--pink0);
+  --sider-back2: var(--pink1);
+  --sider-back3: var(--pink2);
+  --sider-back4: var(--pink3);
+  /* 侧边导航栏背景色 */
+  --sider-back-all: var(--dark-blue0);
+
+  --sider-back-hover: var(--orange0);
+  --router-top-active: var(--orange0);
+  --router-sider-active: var(--orange0);
+  /* 侧边导航栏激活的颜色 */
+
+  --people-carousel-shadow: var(--dark-blue2);
+  /* 人物轮播图的阴影色 */
+
+  --input-back: var(--dark-blue2);
+  /* 设置界面输入框颜色 */
+
+  --select-color:var(--pink3);
+  --no-select-color:var(--dark-blue0);
+  /* 主题选择背景色 */
+
+  --animal-back: var(var(--dark-blue0));
+
+  --poster-back: var(--dark-blue0);
+
+  --text-button: var(--pink1);
+  /* 详情页文字button背景 */
+  --production-back:var(--pink3);
+
+
+  
+  /* 注册登录界面颜色 */
+  --left-light-color:var(--dark-blue0);
+  --border-color:var(--dark-blue2);
+
+  
+
+  /* 注册登录界面 渐变色*/
+  --login-left:var(--dark-blue0);
+  --login-right:var(--dark-blue2);
+
+
+  /* 收藏列表的条目颜色 */
+  --li-color1:var(--pink0);
+  --li-color2:var(--pink1);
+
+
+
+}
