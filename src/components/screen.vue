@@ -156,7 +156,7 @@ onUnmounted(() => {
 
   .up-content {
     top: 20px;
-    padding: 90px 135px 90px 135px;
+    padding: 90px 140px 90px 140px;
 
 
   }

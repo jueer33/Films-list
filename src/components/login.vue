@@ -3,10 +3,10 @@
     <!-- 注册表单 -->
     <div class="form-container sign-up-container" v-if="isSignUp">
       <form @submit.prevent="handleSignUp">
-        <header2 content="注册"/>
+        <header2 content="注册" />
 
         <div class="txtb" v-for="(placeholder, index) in signUpFields" :key="index">
-          <input type="text" v-model="signUpData[placeholder as keyof typeof signUpData]" :placeholder="placeholder"/>
+          <input type="text" v-model="signUpData[placeholder as keyof typeof signUpData]" :placeholder="placeholder" />
           <span :data-placeholder="placeholder"></span>
         </div>
 
@@ -18,11 +18,10 @@
     <!-- 登录表单 -->
     <div class="form-container sign-in-container" v-if="!isSignUp && !isForgotten">
       <form @submit.prevent="handleSignIn">
-        <header2 content="登录"/>
+        <header2 content="登录" />
         <div class="txtb" v-for="(placeholder, index) in signInFields" :key="index">
-          <input :type="index === 0 ? 'email' : 'password'"
-                 v-model="signInData[placeholder as keyof typeof signInData]"
-                 :placeholder="placeholder"/>
+          <input :type="index === 0 ? 'email' : 'password'" v-model="signInData[placeholder as keyof typeof signInData]"
+            :placeholder="placeholder" />
           <span :data-placeholder="placeholder"></span>
         </div>
         <a href="#" @click.prevent="showForgotPassword">忘记密码？</a>
@@ -35,7 +34,7 @@
       <form @submit.prevent="handleForgotPassword">
         <header2 content="重置密码" />
         <div class="txtb" v-for="(placeholder, index) in forgotFields" :key="index">
-          <input type="text" v-model="forgotData[placeholder as keyof typeof forgotData]" :placeholder="placeholder"/>
+          <input type="text" v-model="forgotData[placeholder as keyof typeof forgotData]" :placeholder="placeholder" />
           <span :data-placeholder="placeholder"></span>
         </div>
 
@@ -49,12 +48,12 @@
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
-          <header2 content="已有账号？"/>
+          <header2 content="已有账号？" />
           <p>请使用您的账号进行登录</p>
           <button class="ghost" @click="isSignUp = false; isForgotten = false">登录</button>
         </div>
         <div class="overlay-panel overlay-right">
-          <header2 content="没有账号？"/>
+          <header2 content="没有账号？" />
           <p>立即注册加入我们，和我们一起开始旅程吧</p>
           <button class="ghost" @click="isSignUp = true">注册</button>
         </div>
@@ -67,7 +66,7 @@
 import { ref } from 'vue';
 import header2 from './header2.vue';
 import { useUserStore } from '@/stores/setting/useUser';
-import {fileAPI} from "@/http/api";
+import { fileAPI } from "@/http/api";
 import { ElMessage } from 'element-plus';
 // 用于判断是否显示注册面板
 const isSignUp = ref(false);
@@ -226,19 +225,25 @@ const hideForgotPassword = () => {
 * {
   box-sizing: border-box;
 }
-input::placeholder{
-  color:var(--grey-text);
+
+input::placeholder {
+  color: var(--grey-text);
 }
+
 .container {
   border-radius: 10px;
   box-shadow: 0 14px 28px var(--box-shadow), 0 10px 10px var(--box-shadow);
   position: fixed;
   overflow: hidden;
 
-  position: fixed;  /* 固定在屏幕上 */
-  top: 50%;  /* 垂直居中 */
-  left: 50%;  /* 水平居中 */
-  transform: translate(-50%, -50%);  /* 精确居中 */
+  position: fixed;
+  /* 固定在屏幕上 */
+  top: 50%;
+  /* 垂直居中 */
+  left: 50%;
+  /* 水平居中 */
+  transform: translate(-50%, -50%);
+  /* 精确居中 */
   width: 100%;
 }
 
@@ -312,46 +317,57 @@ button.ghost {
   width: 50%;
   z-index: 2;
 }
+
 /* 第三方工具登录的样式 */
-.other{
+.other {
   margin-top: 20px;
 }
-.other span{
+
+.other span {
   color: var(--grey-text);
   font-style: italic;
 }
-.other .tool{
+
+.other .tool {
   margin-top: 10px;
   display: flex;
   justify-content: space-around;
 }
-.other .tool div{
+
+.other .tool div {
   background-color: #fff;
   border-radius: 50%;
   background-repeat: no-repeat;
 }
+
 .other .tool div:hover {
-  transform: scale(1.1); /* 悬停时放大效果 */
-  box-shadow: 0px 10px 20px var(--box-shadow); /* 添加阴影效果 */
+  transform: scale(1.1);
+  /* 悬停时放大效果 */
+  box-shadow: 0px 10px 20px var(--box-shadow);
+  /* 添加阴影效果 */
 }
-.github{
+
+.github {
   background-image: url('https://cdn-icons-png.flaticon.com/128/5968/5968866.png');
 }
-.google{
-background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
+
+.google {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
 }
-.notion{
+
+.notion {
   background-image: url('https://th.bing.com/th/id/R.6373bd9d838c450d742caa9543973cbd?rik=RLZkRs9tUpLsBA&pid=ImgRaw&r=0');
 
 }
 
 /*注册表单 */
 
-.sign-in-container form a{
+.sign-in-container form a {
   position: relative;
   left: 100px;
 }
-.forgot-password-container form a{
+
+.forgot-password-container form a {
   position: relative;
   left: 100px;
   cursor: pointer;
@@ -424,6 +440,7 @@ background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
   opacity: 1;
   z-index: 5;
 }
+
 .reset-password-container {
   left: 0;
   width: 50%;
@@ -432,6 +449,7 @@ background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
   transition: all 0.6s ease-in-out;
   position: absolute;
 }
+
 .container.right-panel-active .reset-password-container {
   transform: translateX(100%);
   opacity: 1;
@@ -483,7 +501,8 @@ background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
     font-size: 12px;
     padding: 12px 45px;
   }
-  .other .tool div{
+
+  .other .tool div {
     width: 30px;
     height: 30px;
     background-size: 30px;
@@ -543,7 +562,8 @@ background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
     font-size: 16px;
     padding: 12px 45px;
   }
-  .other .tool div{
+
+  .other .tool div {
     width: 40px;
     height: 40px;
     background-size: 40px;
@@ -603,7 +623,7 @@ background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
     padding: 12px 45px;
   }
 
-  .other .tool div{
+  .other .tool div {
     width: 50px;
     height: 50px;
     background-size: 50px;
@@ -649,5 +669,4 @@ background-image: url('https://cdn-icons-png.flaticon.com/128/281/281764.png');
 
 .container.container.right-panel-active .overlay-right {
   transform: translateY(20%);
-}
-</style>
+}</style>
