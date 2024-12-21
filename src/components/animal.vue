@@ -1,17 +1,16 @@
 <template>
     <div class="animal" ref="container" @click="toggleContent">
         <ul v-if="showAnimals">
-            <li v-for="(animal, index) in animals.animals" :key="index" ref="pet" class="pet"
+            <li v-for="(animal, index) in animals" :key="index" ref="pet" class="pet"
                 :style="{ top: `${positions[index].y}px`, left: `${positions[index].x}px` }">
                 <img :src="animal.url" alt="Pet" />
+
             </li>
         </ul>
         <div class="img" v-else>
-            <img src="../assets/images/animal.webp"
-                alt="">
+            <img src="../assets/images/animal.webp" alt="">
         </div>
     </div>
-
 </template>
 
 <script setup>
@@ -26,18 +25,19 @@ const toggleContent = () => {
 };
 
 
-const animals = useAnimal(); // 引用Pinia的store
-const container = ref(null);
+const animals = useAnimal().animals; // 引用Pinia的store
 
+const container = ref(null);
+// console.log(animals.url)
 // 每个小动物的位置信息
 const positions = reactive(
-    animals.animals.map(() => ({
+    animals.map(() => ({
         x: Math.random() * 300, // 初始随机x位置
         y: Math.random() * 300  // 初始随机y位置
     }))
 );
 const targetPositions = reactive(
-    animals.animals.map(() => ({ x: 0, y: 0 }))
+    animals.map(() => ({ x: 0, y: 0 }))
 );
 
 let lastMouseX = 0;
@@ -165,8 +165,8 @@ onMounted(() => {
     }
 
     .pet {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -178,8 +178,8 @@ onMounted(() => {
     }
 
     .pet {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -191,8 +191,8 @@ onMounted(() => {
     }
 
     .pet {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 }
 </style>
