@@ -34,6 +34,8 @@
         <div class="magnum-opu">
             <ul>
                 <li v-for="(work, id) in peopleDetail.known_for" :key="id">
+                    <div class="hover">
+
                     <img :src="fileAPI.postImage + work.poster_path" alt="">
                     <div class="content">
                         <p>名称：{{ work.title || work.name }}</p>
@@ -43,6 +45,8 @@
                         <p>时间：{{ work.first_air_date || work.release_date }}</p>
                         <p>预览：{{ work.overview }}</p>
                     </div>
+                </div>
+
                 </li>
             </ul>
         </div>
@@ -121,20 +125,30 @@ const works = { "backdrop_path": "/ozVwXlfxqNsariipatGwa5px3Pm.jpg", "id": 24083
 
 .magnum-opu ul li {
     position: relative;
-
+}
+.hover {
+  box-shadow: 5px 5px 5px var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* 添加过渡效果 */
 }
 
+.hover:hover {
+  transform: scale(1.01); /* 鼠标悬浮时稍微放大 */
+  box-shadow: 8px 8px 10px var(--box-shadow); /* 增加阴影效果 */
+}
 .content {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    opacity: 0.5;
-    background: linear-gradient(to top, var(--gradation-botton), var(--gradation-top));
-    /* 渐变透明 */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, var(--gradation-botton), var(--gradation-top)); /* 从下到上的渐变背景 */
+  transition: background 0.5s ease; /* 添加背景过渡效果 */
+}
+
+.content p {
+  color: var(--reversed-text);
 }
 
 .content:hover {
-    opacity: 1;
+  background: var(--home-routerview-back); /* 鼠标悬浮时背景变为纯色 */
 }
 
 @media (max-width: 767px) {
@@ -276,7 +290,7 @@ const works = { "backdrop_path": "/ozVwXlfxqNsariipatGwa5px3Pm.jpg", "id": 24083
     }
 
     .magnum-opu .content p {
-        height: 20px;
+        height: 25px;
         margin: 5px;
         white-space: nowrap;
         overflow-x: auto;
@@ -349,7 +363,7 @@ const works = { "backdrop_path": "/ozVwXlfxqNsariipatGwa5px3Pm.jpg", "id": 24083
     }
 
     .magnum-opu .content p {
-        height: 20px;
+        height: 25px;
         margin: 5px;
         white-space: nowrap;
         overflow-x: auto;

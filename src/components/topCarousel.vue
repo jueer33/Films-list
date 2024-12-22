@@ -9,8 +9,8 @@
         </Transition>
       </li>
     </ul>
-    <button class="left" @click="lastImage">&lt;&lt;</button>
-    <button class="right" @click="nextImage">&gt;&gt;</button>
+    <button class="left" @click="lastImage">&lt;</button>
+    <button class="right" @click="nextImage">&gt;</button>
     <div class="circle">
       <template v-for="(image,id) in imageCarousel" :key="id">
         <div>
@@ -137,11 +137,10 @@ ul::after {
   position:absolute;
   top:50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
   border: 0;
-  opacity: 0.6;
+  opacity: 0.5;
+  background-color: var(--home-routerview-back);
 }
 .left{
   left:5px;
@@ -163,18 +162,16 @@ ul::after {
 }
 .circle span{
   display: block;
-  width: 20px;
-  height: 20px;
+
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--home-routerview-back);
   transition: width 0.5s linear;
 }
 .circle span:hover {
   cursor: pointer; /* Changes cursor to a hand */
 }
 .circle  div{
-  width: 40px;
-  height: 20px;
+
   display: flex;
   justify-content: center;
 }
@@ -205,6 +202,56 @@ ul::after {
 .right-leave-to{
   transform: translateX(+100%);
 }
+
+@media (max-width: 767px) {
+.left,.right{
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+}
+.circle span{
+  width: 10px;
+  height: 10px;
+}
+.circle div{
+  width: 20px;
+  height: 10px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .left,.right{
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.circle span{
+  width: 15px;
+  height: 15px;
+}
+.circle div{
+  width: 30px;
+  height: 15px;
+}
+}
+
+@media (min-width: 1024px) {
+  .left,.right{
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+
+}
+.circle span{
+  width: 20px;
+  height: 20px;
+}
+.circle div{
+  width: 40px;
+  height: 20px;
+}
+}
+
 
 </style>
   

@@ -8,8 +8,8 @@
             </li>
 
         </ul>
-        <button class="left" @click="lastImage() ;emitData()">&lt;&lt;</button>
-        <button class="right" @click="nextImage();emitData()">&gt;&gt;</button>
+        <button class="left" @click="lastImage() ;emitData()">&lt;</button>
+        <button class="right" @click="nextImage();emitData()">&gt;</button>
         <div class="circle">
             <template v-for="(people, id) in peoplePopularList" :key="id">
                 <div>
@@ -133,8 +133,7 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    background-color: var(--home-routerview-back);
     border-radius: 50%;
     border: 0;
     opacity: 0.6;
@@ -166,7 +165,7 @@ img {
 .circle span {
     display: block;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--home-routerview-back);
     transition: width 0.5s linear;
 }
 
@@ -236,6 +235,11 @@ img {
         width: 180px;
         height: 250px;
     }
+    .left,.right{
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
 
     ul {
         width: 180px;
@@ -274,7 +278,11 @@ img {
         width: 350px;
         height: 400px;
     }
-
+    .left,.right{
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
     ul {
         width: 350px;
         height: 400px;
@@ -316,7 +324,11 @@ img {
         width: 500px;
         height: 700px;
     }
-
+    .left,.right{
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
     ul {
         width: 500px;
         height: 700px;

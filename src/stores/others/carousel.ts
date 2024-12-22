@@ -4,7 +4,7 @@ import { defineStore } from "pinia";
 
 async function apllyApi(): Promise<any> {
     try {
-        const result = await fetch(`https://api.pexels.com/v1/search?query=cartoon&per_page=5&orientation=landscape`, {
+        const result = await fetch(`https://api.pexels.com/v1/search?query=sky&per_page=5&orientation=landscape`, {
             headers: {
               Authorization: "m27ciXHplMuSLjUcsRDRBaLmqT53UCrRgQ4z4dgta2yD77EDHZmD2JDy",
             },

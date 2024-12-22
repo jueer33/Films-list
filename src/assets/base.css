@@ -27,8 +27,8 @@
   --reversed-text: #ffffff;
 
 
-  --gradation-botton: #0000009d;
-  --gradation-top: #6b686800;
+  --gradation-botton: rgba(0, 0, 0, 0.8);
+  --gradation-top: rgba(0, 0, 0, 0);
   /* 轮播图的渐变透明图 */
 
 
