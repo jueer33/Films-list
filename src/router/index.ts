@@ -1,100 +1,94 @@
+import { KeepAlive } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import tv from '@/views/tv/tv.vue'
-import movie from '@/views/movie/movie.vue'
-import home from '@/views/home.vue'
-import people from '@/views/people/people.vue'
 
 
-import moviePopularity from '@/views/movie/moviePopularity.vue'
-import movieTopRated from '@/views/movie/movieTopRated.vue'
-import movieUpcoming from '@/views/movie/movieUpcoming.vue'
-import movieNowPlaying from '@/views/movie/movieNowPlaying.vue'
-
-
-import TVAiringToday from '@/views/tv/TVAiringToday.vue'
-import TVPopular from '@/views/tv/TVPopular.vue'
-import TVonTheAir from '@/views/tv/TVonTheAir.vue'
-
-import TVtopRated from '@/views/tv/TVtopRated.vue'
-import movieDetail from '@/views/movie/movieDetail.vue'
-import TVdetail from '@/views/tv/TVdetail.vue'
-import discover from '@/views/discover/discover.vue'
-import setting from "@/views/setting/setting.vue"
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component:home ,
+      component:()=>import ('@/views/home.vue'),
+      meta:{
+        KeepAlive:true
+      }
     },
     {
       path:'/discover',
       name:'discover',
-      component:discover
+      component:()=>import('@/views/discover/discover.vue'),
+      meta:{
+        KeepAlive:true
+      }
     },
     {
       path:'/TV',
       name:'TV',
-      component:tv,
+      component:()=>import('@/views/tv/tv.vue'),
       redirect: '/TV/TVAiringToday',
       children:[
         {
           path:'TVAiringToday',
           name:'TVAiringToday',
-          component:TVAiringToday
+          component:()=>import('@/views/tv/TVAiringToday.vue')
         },
         {
           path:'TVPopular',
           name:'TVPopular',
-          component:TVPopular
+          component:()=>import('@/views/tv/TVPopular.vue')
         },
         {
           path:'TVonTheAir',
           name:'TVonTheAir',
-          component:TVonTheAir
+          component:()=>import('@/views/tv/TVonTheAir.vue')
         },
         {
           path:'TVtopRated',
           name:'TVtopRated',
-          component:TVtopRated
+          component:()=>import('@/views/tv/TVtopRated.vue')
         },
         {
           path:'TVDetail',
           name:'TVDetail',
-          component:TVdetail
+          component:()=>import('@/views/tv/TVDetail.vue'),
+          meta:{
+            KeepAlive:true
+          }
         }
       ]
     },
     {
       path:'/movie',
       name:'movie',
-      component:movie ,
+      component:()=>import('@/views/movie/movie.vue') ,
       redirect: '/movie/movieNowPlaying',
       children:[
         {
           path:'movieUpcoming',
           name:'movieUpcoming',
-          component:movieUpcoming
+          component:()=>import('@/views/movie/movieUpcoming.vue')
         },
         {
           path:'moviePopularity',
           name:'moviePopularity',
-          component:moviePopularity,
+          component:()=>import('@/views/movie/moviePopularity.vue'),
         },
         {
           path:'movieTopRated',
           name:'movieTopRated',
-          component:movieTopRated,
+          component:()=>import('@/views/movie/movieTopRated.vue'),
         },
         {
           path:'movieNowPlaying',
           name:'movieNowPlaying',
-          component:movieNowPlaying,
+          component:()=>import('@/views/movie/movieNowPlaying.vue'),
         },{
           path:'movieDetail',
           name:'movieDetail',
-          component:movieDetail,
+          component:()=>import('@/views/movie/movieDetail.vue'),
+          meta:{
+            KeepAlive:true
+          }
         }
       ]
     },
@@ -102,12 +96,12 @@ const router = createRouter({
     {
       path:'/people',
       name:'people',
-      component:people
+      component:()=>import('@/views/people/people.vue')
     },
     {
       path:'/setting',
       name:'setting',
-      component:setting
+      component:()=>import('@/views/setting/setting.vue')
     }
   ],
 })

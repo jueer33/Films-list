@@ -16,6 +16,8 @@ div {
     background-image: var(--background-url);
     background-repeat: no-repeat;
     background-position: center;
+    text-shadow: 4px 4px 4px var(--box-shadow)
+
 }
 
 @media (max-width: 767px) {

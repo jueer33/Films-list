@@ -58,12 +58,16 @@ ul {
 li {
   position: relative;
 }
+li:hover img ,li:hover .vote_average .icon{
+  transform: scale(1.1); /* 放大到1.1倍 */
+  transition: transform 0.3s ease; /* 平滑过渡效果 */
+}
 
 img {
   box-shadow: 0px 4px 4px var(--box-shadow);
   object-fit: cover;
   border-radius: 20px;
-
+  transition: transform 0.3s ease; /* 确保图片在非悬停状态下也有过渡效果 */
 }
 
 .title {
@@ -98,6 +102,7 @@ img {
   margin-right: 4px;
   /* 给图标和数字之间添加间隔 */
   background-image: url("https://img.icons8.com/?size=48&id=19417&format=png");
+  transition: transform 0.3s ease; /* 确保图片在非悬停状态下也有过渡效果 */
 }
 
 .vote_average .num {

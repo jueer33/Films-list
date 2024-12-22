@@ -6,7 +6,7 @@
         <header2 content="注册" />
 
         <div class="txtb" v-for="(placeholder, index) in signUpFields" :key="index">
-          <input type="text" v-model="signUpData[placeholder as keyof typeof signUpData]" :placeholder="placeholder" />
+          <input type="text" v-model.lazy="signUpData[placeholder as keyof typeof signUpData]" :placeholder="placeholder" />
           <span :data-placeholder="placeholder"></span>
         </div>
 
@@ -20,7 +20,7 @@
       <form @submit.prevent="handleSignIn">
         <header2 content="登录" />
         <div class="txtb" v-for="(placeholder, index) in signInFields" :key="index">
-          <input :type="index === 0 ? 'email' : 'password'" v-model="signInData[placeholder as keyof typeof signInData]"
+          <input :type="index === 0 ? 'email' : 'password'" v-model.lazy="signInData[placeholder as keyof typeof signInData]"
             :placeholder="placeholder" />
           <span :data-placeholder="placeholder"></span>
         </div>
@@ -34,7 +34,7 @@
       <form @submit.prevent="handleForgotPassword">
         <header2 content="重置密码" />
         <div class="txtb" v-for="(placeholder, index) in forgotFields" :key="index">
-          <input type="text" v-model="forgotData[placeholder as keyof typeof forgotData]" :placeholder="placeholder" />
+          <input type="text" v-model.lazy="forgotData[placeholder as keyof typeof forgotData]" :placeholder="placeholder" />
           <span :data-placeholder="placeholder"></span>
         </div>
 

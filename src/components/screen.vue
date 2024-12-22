@@ -95,6 +95,9 @@ onUnmounted(() => {
 .content,
 .up-content {
   background-color: var(--home-routerview-back);
+  min-height: 100vh;
+  /* 当页面加载的时候会出现部分组件还没有加载出来，然后页面高度塌陷的情况，使得我的页面颜色部分是白的部分是设置的颜色 */
+  
 }
 
 /* Default styles */

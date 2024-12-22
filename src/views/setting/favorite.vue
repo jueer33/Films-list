@@ -84,13 +84,25 @@ function formatDate(date: string | null): string {
   background-color: var(--li-color2); /* 白色 */
 }
 
-ul li .rout{
-    display: flex;
-    box-shadow: 5px 5px 5px var(--box-shadow);
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 20px 0;
+
+
+
+ul li .rout {
+  display: flex;
+  box-shadow: 5px 5px 5px var(--box-shadow);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,background-color 0.3s ease; /* 添加过渡效果 */
 }
+
+ul li .rout:hover {
+  transform: scale(1.05); /* 鼠标悬浮时稍微放大 */
+  box-shadow: 8px 8px 10px var(--box-shadow); /* 增加阴影效果 */
+  background-color: var(--home-routerview-back);
+}
+
+
 ul {
     display: flex;
     flex-direction: column;
@@ -98,6 +110,7 @@ ul {
   }
   ul li img{
     box-shadow: 2px 2px 4px  var(--box-shadow);
+    mask: linear-gradient(to right, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
   }
 @media (max-width: 767px) {
   .content {

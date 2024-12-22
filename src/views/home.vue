@@ -40,7 +40,7 @@
       </h2>
       <div class="context">
 
-        <video controls width="100%" height="auto">
+        <video controls width="100%" height="auto" autoplay loop>
           <source src="../assets/video/顶部轮播图.mp4" type="video/mp4">
           您的浏览器不支持视频播放，请升级到最新版本的浏览器。
         </video>
@@ -90,7 +90,7 @@
 
           </p>
         </div>
-        <video controls width="100%" height="auto">
+        <video controls width="100%" height="auto" autoplay loop>
           <source src="../assets/video/详情页面.mp4" type="video/mp4">
           您的浏览器不支持视频播放，请升级到最新版本的浏览器。
         </video>
@@ -105,7 +105,7 @@
       </h2>
       <div class="context">
 
-        <video controls width="100%" height="auto">
+        <video controls width="100%" height="auto" autoplay loop>
           <source src="../assets/video/演员页面.mp4" type="video/mp4">
           您的浏览器不支持视频播放，请升级到最新版本的浏览器。
         </video>
@@ -148,7 +148,7 @@
 
           </p>
         </div>
-        <video controls width="100%" height="auto">
+        <video controls width="100%" height="auto" autoplay loop>
           <source src="../assets/video/设置页面.mp4" type="video/mp4">
           您的浏览器不支持视频播放，请升级到最新版本的浏览器。
         </video>
@@ -162,7 +162,7 @@
         登录注册
       </h2>
       <div class="context">
-        <video controls width="100%" height="auto">
+        <video controls width="100%" height="auto" autoplay loop>
           <source src="../assets/video/login.mp4" type="video/mp4">
           您的浏览器不支持视频播放，请升级到最新版本的浏览器。
         </video>

@@ -2,7 +2,7 @@
   <div class="content">
     <label for="username-input">用户名：</label>
     <!-- Editable input field for the username -->
-    <input id="username-input" type="text" v-model="userName" placeholder="Enter your username"/>
+    <input id="username-input" type="text" v-model.lazy="userName" placeholder="Enter your username"/>
     <!-- Button to confirm the change -->
     <button @click="updateUserName"></button>
   </div>
@@ -79,7 +79,9 @@ async function updateUserName() {
 button {
   background-image: url('https://cdn-icons-png.flaticon.com/128/16786/16786007.png');
 }
-
+#username-input {
+  border-radius: 10px;
+}
 @media (max-width: 767px) {
   label {
     font-size: 16px;
@@ -107,11 +109,11 @@ button {
 
   /* Optional styling for the input and button */
   #username-input {
-    border: none;
     box-shadow: inset 0 -4px 4px rgba(0, 0, 0, 0.2);
     /* Adjust values as needed */
     outline: none;
     padding: 4px;
+    padding-left: 8px;
     font-size: 16px;
     width: 150px;
     height: 20px;
@@ -150,11 +152,11 @@ button {
 
   /* Optional styling for the input and button */
   #username-input {
-    border: none;
     box-shadow: inset 0 -4px 4px rgba(0, 0, 0, 0.2);
     /* Adjust values as needed */
     outline: none;
-    padding: 4px;
+    padding: 5px;
+    padding-left: 8px;
     font-size: 20px;
     width: 200px;
     height: 25px;
@@ -193,14 +195,14 @@ button {
 
   /* Optional styling for the input and button */
   #username-input {
-    border: none;
     box-shadow: inset 0 -4px 4px rgba(0, 0, 0, 0.2);
     /* Adjust values as needed */
     outline: none;
-    padding: 4px;
+    padding: 5px;
+    padding-left: 10px;
     font-size: 20px;
     width: 200px;
-    height: 35px;
+    height: 30px;
     margin-right: 8px;
     background-color: var(--input-back);
 
